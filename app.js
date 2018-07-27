@@ -12,7 +12,7 @@ switch (comando) {
         console.log(tarea);
         break;
     case 'listar':
-        let listado = porHacer.listarDB();
+        let listado = porHacer.listarDB(argv.filtradoCompletado);
         console.log("================== Por Hacer ====================".green);
         listado.forEach(function (tarea) {
             console.log(`${tarea.descripcion} - completado: ${tarea.completado}`);

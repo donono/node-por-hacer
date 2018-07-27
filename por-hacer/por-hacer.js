@@ -34,9 +34,13 @@ const cargarDB = () => {
 
 }
 
-const listarDB = () => {
+const listarDB = (completado) => {
 
     let lista = require("../db/data.json");
+
+    if(completado){
+        return lista.filter( tarea => tarea.completado === true);
+    }
     return lista;
 }
 
